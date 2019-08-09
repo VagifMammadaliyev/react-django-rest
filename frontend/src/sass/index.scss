@@ -1,0 +1,57 @@
+header {
+  .login-control, .title {
+    display: flex;
+  }
+
+  @media (min-width: 0) {
+    .login-control, .title {
+      justify-content: center;
+      padding: 0px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .login-control {
+      justify-content: flex-end;
+      padding: 55px;
+    }
+
+    .title {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.word-tab {
+  .word-title {
+    display: flex;
+    font-style: italic;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+
+  .word-author {
+    text-decoration: underline;
+  }
+
+  .word-mean {
+    color: grey;
+    text-align: justify;
+  }
+}
+
+.my-word-control {
+  color: rgb(0, 120, 255);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: blue;
+  }
+}
