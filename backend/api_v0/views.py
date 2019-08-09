@@ -21,7 +21,7 @@ from api_v0.permissions import IsOwnerOrReadOnly
 from api_v0.pagination import WordTabsPagination
 from api_v0.models import Word
 from api_v0.serializers import WordSerializer
-from api_v0.throttling import OncePerDayUserThrottle
+from api_v0.throttling import TwicePerDayUserThrottle
 
 
 def signin(request):
@@ -131,7 +131,7 @@ class ListWords(views.APIView):
 
     def get_throttles(self):
         if self.request.method == 'POST':
-            self.throttle_classes = [OncePerDayUserThrottle]
+            self.throttle_classes = [TwicePerDayUserThrottle]
         return super().get_throttles()
 
     @property
