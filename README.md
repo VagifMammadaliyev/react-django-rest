@@ -45,7 +45,7 @@ cd react-django-rest/backend
 
 # migrate and run django app
 ./manage.py migrate
-./manage.py makemigrations
+./manage.py makemigrations api_v0
 ./manage.py migrate
 ./manage.py runserver  # should start on port 8000
 
