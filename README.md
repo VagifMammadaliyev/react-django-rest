@@ -50,6 +50,7 @@ cd react-django-rest/backend
 ./manage.py runserver  # should start on port 8000
 
 # run react app
-cd ../frontend/scripts
-node start.js  # should start on port 3000
+cd ../frontend
+npm install package.json
+node script/start.js  # should start on port 3000
 ```
